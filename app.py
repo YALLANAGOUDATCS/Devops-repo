@@ -1,10 +1,3 @@
-Python
-Note: You will automatically switch to the new branch. Make sure you name the branch
-session-1, as this name will be used in our GitHub Actions later.
-Adding Code to the Repository
-1. From the repo’s code page, click the Add file or + sign button and create a new file.
-2. Name the file app.py and paste the following code into it. Click the Commit changes
-button to save the file.
 from flask import Flask, request
 from flask_restful import Resource, Api
 app = Flask(__name__)
