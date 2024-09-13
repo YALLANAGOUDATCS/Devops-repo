@@ -14,7 +14,7 @@ class ConvertTemp(Resource):
 # Perform temperature conversion
         converted_temp = self.convert_temperature(temp, scale, target_scale)
         if converted_temp is None:
-        return {'error': 'Invalid scale or target scale'}, 400
+            return {'error': 'Invalid scale or target scale'}, 400
         return {'converted_temp': converted_temp, 'target_scale': target_scale}
     def convert_temperature(self, temp, scale, target_scale):
 # Conversion logic
