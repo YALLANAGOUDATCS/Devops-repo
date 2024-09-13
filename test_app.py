@@ -23,13 +23,13 @@ def test_convert_temp_c_to_f(client, temp, expected):
     assert response.status_code == 200
     assert response.json['converted_temp'] == pytest.approx(expected, rel=1e-2)
 # Kelvin to Celsius
-@pytest.mark.parametrize("temp, expected", [(273.15, 0.0), (373.15, 100.0),(233.15, -40.0)])
+@pytest.mark.parametrize("temp, expected", [(273.15, 0.0), (373.15, 100.0), (233.15, -40.0)])
 def test_convert_temp_k_to_c(client, temp, expected):
     response =client.get(f'/convert-temp?temp={temp}&scale=kelvin&target_scale=celsius')
     assert response.status_code == 200
     assert response.json['converted_temp'] == pytest.approx(expected, rel=1e-2)
 # Kelvin to Fahrenheit
-@pytest.mark.parametrize("temp, expected", [(273.15, 32.0), (373.15, 212.0),(233.15, -40.0)])
+@pytest.mark.parametrize("temp, expected", [(273.15, 32.0), (373.15, 212.0), (233.15, -40.0)])
 def test_convert_temp_k_to_f(client, temp, expected):
     response = client.get(f'/convert-temp?temp={temp}&scale=kelvin&target_scale=fahrenheit')
     assert response.status_code == 200
