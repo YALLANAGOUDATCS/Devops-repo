@@ -1,9 +1,9 @@
-name: Run Tests on Push to session1 and Pull Request to main
+name: Run Tests on Push to Session1 and Pull Request to main
 
 on:
   push:
     branches:
-      - session1
+      - Session1
   pull_request:
     branches:
       - main
